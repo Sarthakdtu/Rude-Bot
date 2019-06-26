@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rude Bot</title>
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Telex|Coming+Soon&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossorigin="anonymous">
+    <script>
+          function go(){
+      setTimeout(window.location='#bottom', 20);
+      }
+    </script>
+  </head>
+  <body id="body" onLoad='go()'>
+    <div class="container">
+      <h1 class="rude_bot">Rude Bot</h1>
+      <br>
+      <div class="container">
+        {% for bot_msg,user_msg in messages %}
+          {% if user_msg != "" %}
+            <div class="container p-3 bg-danger text-white">
+            <span class="name_msg">Me :</span> <span id="user_actual_msg"> {{user_msg}} </span>
+            </div>
+          {% endif %}
+
+          <div class="container p-3 bg-dark text-white">
+            <span class="name_msg">Bot :</span> <span class="actual_msg">{{ bot_msg }} </span>
+          </div>
+        {% endfor %}
+        <br>
+      </div>
+        <div class="form-group">
+          <form class="text_msg" method="post">
+            {%csrf_token%}
+            <input type="text" class="form-control form-control-lg" name="msg" id = "input" placeholder="Say it moron!">
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit_message">SEND</button>
+          </form>
+        </div>
+        <br><br><br><br>
+          <a name='bottom'>&nbsp;</a>
+        <img src="https://www.stickpng.com/assets/thumbs/580b57fbd9996e24bc43bdfe.png" class="img-fluid">
+        <a href="{% url 'error' %}"> <button type="button" class="btn btn-danger btn-lg " name="button">
+                  Just End This And Kill Me, Please!
+                 </button>
+        </a>
+        <br><br><br><br>
+    </div>
+  </body>
+</html>

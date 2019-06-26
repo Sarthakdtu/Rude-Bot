@@ -1,0 +1,17 @@
+.rude_bot{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 100px;
+  text-shadow: 0px 1px #000000;
+}
+
+#body{
+  background-color: #f4f4f4;
+}
+
+#link{
+  text-decoration: none;
+}
+
+.rant{
+  font-family: 'Orbitron', sans-serif;
+}

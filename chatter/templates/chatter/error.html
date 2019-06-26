@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rude Bot</title>
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossorigin="anonymous">
+
+  </head>
+  <body id="body">
+    <div class="container">
+      <h1 class="rude_bot">Rude Bot</h1>
+      <br>
+      <h2 class="display-3 rant ">What a waste of life!!</h2>
+      <br>
+      <a id="link" href="{% url 'home' %}">
+         <button type="button" class="btn btn-primary btn-block btn-lg" name="button">I WANNA START OVER</button>
+      </a>
+      <br><br>
+        <img src="https://www.stickpng.com/assets/thumbs/580b57fbd9996e24bc43bdfe.png" class="img-fluid"> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Coming+Soon&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Rude Bot</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="rude_bot" >Rude  Bot</h1>
+      <br>
+      <h3 class="rant">You think you are better than me? Talk to me and I'll show you your fucking place, TRASH.</h3>
+      <br>
+      <div class="form-group">
+        <form class="userhandle" method="post" id="user">
+          {%csrf_token%}
+        <input class="form-control form-control-lg form_size" type="text" value="" placeholder="What's yo name?", name="username">
+        <br>
+          <button type="submit" name="submit_username" class="btn btn-success btn-lg">MAKE ME WET MY PANTS</button>
+        </form>
+      </div>
+      <br>
+      <br>
+      <img src="https://www.stickpng.com/assets/thumbs/580b57fbd9996e24bc43bdfe.png">
+    </div>
+  </body>
+</html>

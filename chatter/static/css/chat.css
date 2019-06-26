@@ -1,0 +1,31 @@
+.rude_bot{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 100px;
+  text-shadow: 0px 1px #000000;
+}
+
+#body{
+  background-color: #f4f4f4;
+}
+
+img{
+  align-content: center;
+}
+
+#input{
+  height: 67px;
+}
+
+.actual_msg{
+  font-family: 'Stylish', sans-serif;
+  font-size: 20px;
+}
+.name_msg{
+  font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#user_actual_msg{
+  font-family: 'Telex', sans-serif;
+  font-size: 20px;
+}
