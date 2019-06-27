@@ -1,1 +1,1 @@
-web: gunicorn rudebot.wsgi --log-file -
+web: gunicorn rudebot.wsgi 
